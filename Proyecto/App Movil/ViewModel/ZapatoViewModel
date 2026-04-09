@@ -1,0 +1,31 @@
+using System.Collections.ObjectModel;
+using AppMovil.Models;
+
+namespace AppMovil.ViewModels
+{
+    public class ZapatoViewModel
+    {
+        public ObservableCollection<ZapatoBionico> ListaZapatos { get; set; }
+
+        public ZapatoViewModel()
+        {
+            ListaZapatos = new ObservableCollection<ZapatoBionico>
+            {
+                new ZapatoBionico
+                {
+                    Nombre = "Zapato Runner X",
+                    Descripcion = "Aumenta velocidad",
+                    NivelBateria = 80,
+                    Estado = true
+                },
+                new ZapatoBionico
+                {
+                    Nombre = "Zapato Jump Pro",
+                    Descripcion = "Permite saltar alto",
+                    NivelBateria = 60,
+                    Estado = false
+                }
+            };
+        }
+    }
+}
